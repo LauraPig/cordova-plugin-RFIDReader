@@ -1,0 +1,17 @@
+{
+  "name": "android.reader",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "android.reader",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "jimmy.Liang",
+  "license": "MIT"
+}

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="android.reader" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>rfidreader</name>
+  <js-module name="rfidreader" src="www/rfidreader.js">
+    <clobbers target="cordova.plugins.rfidreader" />
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="rfidreader">
+        <param name="android-package" value="android.reader.rfidreader" />
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+    <source-file src="src/android/rfidreader.java" target-dir="src/android/reader/rfidreader" />
+    <source-file src="src/android/SerialPortFinder.java" target-dir="src/android/reader/SerialPortFinder" />
+    <source-file src="src/android/ReaderAndroid.java" target-dir="src/android/reader/ReaderAndroid" />
+
+    <source-file src="src/android/libs/armeabi/libReaderAndroid.so" target-dir="libs/armeabi"/>
+    <source-file src="src/android/libs/armeabi-v7a/libReaderAndroid.so" target-dir="libs/armeabi-v7a"/>
+    <source-file src="src/android/libs/x86_64/libReaderAndroid.so" target-dir="libs/x86_64"/>
+    <source-file src="src/android/libs/x86/libReaderAndroid.so" target-dir="libs/x86"/>
+
+
+    <source-file src="src/android/libs/armeabi/DasMifarecard.jar" target-dir="libs"/>
+    <!-- <source-file src="src/android/libs/armeabi-v7a/DasMifarecard.jar" target-dir="libs"/>
+    <source-file src="src/android/libs/x86_64/DasMifarecard.jar" target-dir="libs"/>
+    <source-file src="src/android/libs/x86/DasMifarecard.jar" target-dir="libs"/> -->
+
+    </platform>
+</plugin>
